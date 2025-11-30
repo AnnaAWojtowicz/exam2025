@@ -24,3 +24,10 @@ You have to click the check button for any attempt at an answer to be valid.
 
 
 """
+
+def build_price_map(names, prices):
+    result = dict(zip(names, prices))
+    print(result)
+
+
+build_price_map(["pen", "paper", "eraser"], [5, 12, 3])
