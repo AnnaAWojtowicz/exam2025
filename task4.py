@@ -20,8 +20,10 @@ Assume all input lists are valid and contain only integers.
 You have to click the check button for any attempt at an answer to be valid.
 For example:
 
-Test	Result
+Test	
 print_negative([-5, 3, -2, 7])
+
+Result
 -5
 -2
 """

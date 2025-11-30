@@ -7,6 +7,7 @@ Alice 10
 Bob 5
 Alice 7
 Charlie 3
+
 The function should:
 
 Open the file for reading.
@@ -52,6 +53,15 @@ def find_top_total_from_file(filename):
                 dictionary[name] += int(some_value)
             else: 
                 dictionary[name] = int(some_value)
+        """
+        highest = 0
+        name = ""
+        for key, value in dictionary.items():
+            if value > highest:
+                highest = value 
+                name = key
+        print(name, highest)
+        """
         highest_name = max(dictionary, key = dictionary.get)
         highest_value = max(dictionary.values())
         highest = (highest_name, highest_value)

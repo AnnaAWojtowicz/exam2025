@@ -8,13 +8,11 @@ The user must be prompted using the exact text:
 Enter a positive integer (0 to stop): 
 For example, if the user enters:
 
-10
-8
-25
-0
-The output should be:
-
-Enter a positive integer (0 to stop): Enter a positive integer (0 to stop): Enter a positive integer (0 to stop): Enter a positive integer (0 to stop): 2
+Enter a positive integer (0 to stop): 10 
+Enter a positive integer (0 to stop): 8
+Enter a positive integer (0 to stop): 25
+Enter a positive integer (0 to stop): 0 
+The output should be:2
 Note(s):
 
 It is very important to match the text displayed to the user and the output shown precisely to the provided example(s). Output must match the text exactly (case-sensitive).

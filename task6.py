@@ -13,10 +13,9 @@ Slicing (e.g. words[1:])
 You must determine the shortest word using manual iteration and comparison.
 
 For example:
-
 shortest_word(["elephant", "cat", "zebra"])  →  "cat"
-Another example:
 
+Another example:
 shortest_word(["hi", "to", "at"])  →  "hi"
 The function must return the result, not print it.
 

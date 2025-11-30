@@ -42,10 +42,13 @@ def load_average_values(filename):
     dictionary = {}
     with open(filename, "r", newline="") as file:
         reader = csv.reader(file)
-        next(reader)
+        #reader = csv.DictReader(file) <- prints as dictionary
+        next(reader)    # <- skips the header
         for row in reader:
+            # print(row)
             dictionary[row[0]] = round((sum([float(row[1]),float(row[2]),float(row[3])]) / 3), 1)
-    # print(dictionary)
+           
+    #print(dictionary)
     return dictionary
 
 

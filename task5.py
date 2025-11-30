@@ -35,4 +35,5 @@ def count_starting_with(words, letter):
     return count
 
 
-count_starting_with(["dog", "door", "cat", "car", "cunt"], "c")
+count_starting_with(["dog", "door", "cat", "car", "cunt"], "d")
+count_starting_with(["Apple", "ant", "anchor"], "a")
