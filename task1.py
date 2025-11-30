@@ -32,3 +32,15 @@ Enter temperature in Celsius: 5
 Cold
 
 """
+
+user_input = int(input("Enter temperature in Celsius: "))
+
+def temp(input):
+    if input < 10:
+        print("Cold")
+    elif 10 <= input <= 24:
+        print("Warm")
+    else: 
+        print("Hot")
+
+temp(user_input)
