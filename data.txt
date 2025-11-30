@@ -1,0 +1,4 @@
+Alice 10
+Bob 5
+Alice 7
+Charlie 3

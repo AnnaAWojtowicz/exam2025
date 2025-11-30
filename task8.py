@@ -38,3 +38,25 @@ Assume all non-empty lines in the file are valid and contain a name and an integ
 You have to click the check button for any attempt at an answer to be valid.
 
 """
+
+
+def find_top_total_from_file(filename):
+    dictionary = {}
+    with open(filename, "r") as file:
+        for line in file:
+            line = line.strip()
+            if not line:
+                continue
+            name, some_value = line.split()
+            if name in dictionary:
+                dictionary[name] += int(some_value)
+            else: 
+                dictionary[name] = int(some_value)
+        highest_name = max(dictionary, key = dictionary.get)
+        highest_value = max(dictionary.values())
+        highest = (highest_name, highest_value)
+            
+        print(highest)
+
+
+find_top_total_from_file("data.txt")
