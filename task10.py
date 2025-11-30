@@ -19,8 +19,10 @@ Open the CSV file for reading.
 Skip the header row.
 Build and return a dictionary mapping each product name (string) to a list of its integer ratings.
 Example return value:
-
 {'Mouse': [5, 3], 'Keyboard': [4], 'Monitor': [5]}
+
+
+
 average_ratings(ratings_dict)
 Takes a dictionary of product ratings, as returned by load_ratings.
 The function should:
@@ -33,6 +35,11 @@ Example:
 becomes:
 
 {'Mouse': 4.0, 'Keyboard': 4.0, 'Monitor': 5.0}
+
+
+
+
+
 print_rating_report(filename)
 A procedure (no return value) that:
 Calls load_ratings(filename) to read the data.
@@ -49,3 +56,41 @@ The example inputs, as shown below, will be provided by the system. You should o
 Assume all input data is valid unless otherwise stated.
 You have to click the check button for any attempt at an answer to be valid.
 """
+
+import csv
+
+dictionary = {}
+
+
+def load_ratings(filename):
+    with open(filename, "r", newline="") as file:
+        reader = csv.reader(file)
+        next(reader)
+        for row in reader:
+            if row[0] in dictionary:
+                dictionary[row[0]] += [int(row[1])]
+            else: 
+                dictionary[row[0]] = [int(row[1])]
+    #print(dictionary)
+    return dictionary
+
+dictionary_items = load_ratings("data.csv")
+
+def average_ratings(ratings_dict):
+    average = {}
+    for key, value in ratings_dict.items():
+        average[key] = round(sum(value)/len(value), 1)
+    # print(average)
+    return average
+
+average_results = average_ratings(dictionary_items)
+
+
+def print_rating_report(filename):
+    #print(filename)
+    highest_key = max(average_results, key = average_results.get)
+    highest_value = max(average_results.values())
+    #print(highest_key, highest_value)
+    print(f'Top rated product: {highest_key} with average rating {highest_value}')
+
+print_rating_report(dictionary_items)

@@ -42,7 +42,6 @@ dictionary = {}
 
 def load_average_values(filename):
     with open(filename, "r", newline="") as file:
-        
         reader = csv.reader(file)
         next(reader)
         for row in reader:
