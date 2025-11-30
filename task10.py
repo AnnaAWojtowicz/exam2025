@@ -59,10 +59,11 @@ You have to click the check button for any attempt at an answer to be valid.
 
 import csv
 
-dictionary = {}
+
 
 
 def load_ratings(filename):
+    dictionary = {}
     with open(filename, "r", newline="") as file:
         reader = csv.reader(file)
         next(reader)
@@ -74,7 +75,7 @@ def load_ratings(filename):
     #print(dictionary)
     return dictionary
 
-dictionary_items = load_ratings("data.csv")
+# dictionary_items = load_ratings("data.csv")
 
 def average_ratings(ratings_dict):
     average = {}
@@ -83,14 +84,16 @@ def average_ratings(ratings_dict):
     # print(average)
     return average
 
-average_results = average_ratings(dictionary_items)
+# average_results = average_ratings(dictionary_items)
 
 
 def print_rating_report(filename):
     #print(filename)
+    dictionary_items = load_ratings(filename)
+    average_results = average_ratings(dictionary_items)
     highest_key = max(average_results, key = average_results.get)
     highest_value = max(average_results.values())
     #print(highest_key, highest_value)
     print(f'Top rated product: {highest_key} with average rating {highest_value}')
 
-print_rating_report(dictionary_items)
+print_rating_report("data.csv")

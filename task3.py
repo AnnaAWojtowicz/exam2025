@@ -33,7 +33,7 @@ def count_below_50(values):
         if value < 50:
             container.append(value)
     result = len(container)
-    print(result)
+    #print(result)
     return result
 
 count_below_50([10, 60, 20, 50, 10])

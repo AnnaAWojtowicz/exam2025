@@ -38,15 +38,14 @@ You have to click the check button for any attempt at an answer to be valid.
 """
 import csv
 
-dictionary = {}
-
 def load_average_values(filename):
+    dictionary = {}
     with open(filename, "r", newline="") as file:
         reader = csv.reader(file)
         next(reader)
         for row in reader:
             dictionary[row[0]] = round((sum([float(row[1]),float(row[2]),float(row[3])]) / 3), 1)
-    #print(dictionary)
+    # print(dictionary)
     return dictionary
 
 

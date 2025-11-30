@@ -56,7 +56,8 @@ def find_top_total_from_file(filename):
         highest_value = max(dictionary.values())
         highest = (highest_name, highest_value)
             
-        print(highest)
+        #print(highest)
+        return highest
 
 
 find_top_total_from_file("data.txt")
