@@ -24,3 +24,15 @@ The example inputs, as shown above, will be provided by the system. You should o
 Assume all input lists contain valid non-empty strings.
 You have to click the check button for any attempt at an answer to be valid.
 """
+
+
+def count_starting_with(words, letter):
+    count = 0
+    for word in words:
+        if word[0] == letter:
+            count += 1
+    # print(count)
+    return count
+
+
+count_starting_with(["dog", "door", "cat", "car", "cunt"], "c")
