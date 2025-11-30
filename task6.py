@@ -27,3 +27,16 @@ The example inputs will be provided by the system during testing.
 Assume the list contains at least one valid string.
 You have to click the check button for any attempt at an answer to be valid.
 """
+
+
+def shortest_word(words):
+    shortest = words[0]
+    for word in words:
+        if len(word) < len(shortest):
+            shortest = word
+    #print(shortest)
+    return shortest
+
+
+shortest_word(["elephant", "cat", "zebra"]) 
+shortest_word(["hi", "to", "at"]) 
