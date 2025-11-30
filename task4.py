@@ -25,3 +25,11 @@ print_negative([-5, 3, -2, 7])
 -5
 -2
 """
+
+
+def print_negative(values):
+    for value in values:
+        if value < 0:
+            print(value)
+
+print_negative([-5, 3, -2, 7])
