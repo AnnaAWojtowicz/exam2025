@@ -25,3 +25,15 @@ Test	Result
 print(count_below_50([10, 60, 49, 50, 80]))
 2
 """
+
+
+def count_below_50(values):
+    container = []
+    for value in values:
+        if value < 50:
+            container.append(value)
+    result = len(container)
+    print(result)
+    return result
+
+count_below_50([10, 60, 20, 50, 10])
