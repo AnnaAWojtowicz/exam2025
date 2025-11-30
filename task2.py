@@ -23,3 +23,19 @@ Assume all input is valid unless otherwise stated.
 You have to click the check button for any attempt at an answer to be valid.
 
 """
+
+def divide(num):
+    count = 0
+    if num % 5 == 0:
+        count += 1
+    return count
+keep_going = True
+
+while keep_going:
+    user_input = int(input("Enter a positive integer (0 to stop):"))
+    count_total = divide(user_input)
+    count_total += 1
+    if user_input == 0:
+        print(count_total)
+        keep_going = False
+
