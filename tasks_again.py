@@ -79,4 +79,16 @@ count_starting_with(["dog", "door", "cat"], "d")
 count_starting_with(["Apple", "ant", "anchor", "Allah", "asterix"], "a")
 """
 
-""""""
+"""
+# task 6
+
+def shortest_word(words):
+    shortest = words[0]
+    for word in words:
+        if len(word) < len(shortest):
+            shortest = word
+    #print(shortest)
+    return shortest
+
+shortest_word(["elephant", "cat", "zebra"]) 
+"""
