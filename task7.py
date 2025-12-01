@@ -42,6 +42,15 @@ def build_price_map(names, prices):
         index += 1 
     print(dict)
 """
+"""
+# OR 
 
+def build_price_map(names, prices):
+    dict = {}
+    
+    for i in range(len(names)):
+        dict[names[i]] = prices[i]
+    print(dict)
+"""
 
 build_price_map(["pen", "paper", "eraser"], [5, 12, 3])

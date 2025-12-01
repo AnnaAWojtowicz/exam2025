@@ -72,7 +72,7 @@ def load_ratings(filename):
     print(dictionary)
     return dictionary
 
-#dictionary_items = load_ratings("data.csv")
+dictionary_items = load_ratings("data.csv")
 
 def average_ratings(ratings_dict):
     average = {}
@@ -92,4 +92,4 @@ def print_rating_report(filename):
     #print(highest_key, highest_value)
     print(f'Top rated product: {highest_key} with average rating {highest_value}')
 
-print_rating_report("data.csv")
+#print_rating_report("data.csv")
