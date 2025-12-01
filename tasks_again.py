@@ -12,11 +12,12 @@ def temp(user_input):
 temp(user_input)
 """
 
-""""""
+"""
 # task2
 
-user_input = int(input("Enter a positive integer (0 to stop): "))
 
+
+total_count = 0
 
 def divide(num):
     count = 0
@@ -25,9 +26,21 @@ def divide(num):
     return count
 
 keep_going = True
+
 while keep_going:
-    divide(user_input)
+
+    user_input = int(input("Enter a positive integer (0 to stop): "))
+    
+    if user_input == 0:
+        keep_going = False
+        break
+    elif user_input < 0:
+        print("You have to enter a positive integer. Try again")
+    
+    total_count += divide(user_input)
+
+print(total_count)
 
     
-
+"""
     
