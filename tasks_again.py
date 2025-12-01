@@ -15,8 +15,6 @@ temp(user_input)
 """
 # task2
 
-
-
 total_count = 0
 
 def divide(num):
@@ -40,7 +38,28 @@ while keep_going:
     total_count += divide(user_input)
 
 print(total_count)
-
-    
 """
-    
+
+"""
+# task 3
+
+def count_below_50(values):
+    count = 0
+    for value in values:
+        if value < 50:
+            count += 1
+    return count
+
+print(count_below_50([10, 60, 49, 50, 80]))
+"""
+
+"""
+# task 4
+
+def print_negative(values):
+    for value in values:
+        if value < 0:          
+            print(value)
+
+print_negative([-5, 3, -2, 7])
+"""
