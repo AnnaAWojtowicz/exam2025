@@ -63,3 +63,20 @@ def print_negative(values):
 
 print_negative([-5, 3, -2, 7])
 """
+
+"""
+# task 5
+
+def count_starting_with(words, letter):
+    count = 0
+    for word in words:
+        if word[0] == letter:
+            count += 1
+    print(count)
+    return count
+
+count_starting_with(["dog", "door", "cat"], "d")
+count_starting_with(["Apple", "ant", "anchor", "Allah", "asterix"], "a")
+"""
+
+""""""
