@@ -55,3 +55,11 @@ with open(filename, "w", newline="") as file:
     # name,age,city
     # Anna,29,Oslo
     # Mark,33,London 
+
+# Ignoring blank lines in a csv file
+def find_in_file(filename):
+    with open(filename, "r") as file:
+        for line in file:
+            line = line.strip()
+            if not line:
+                continue
