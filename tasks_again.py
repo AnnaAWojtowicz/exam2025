@@ -92,3 +92,17 @@ def shortest_word(words):
 
 shortest_word(["elephant", "cat", "zebra"]) 
 """
+
+""""""
+
+# task7
+
+def build_price_map(names, prices):
+    dict = {}
+    index = 0
+    while index < len(names):
+        dict[names[index]] = prices[index]
+        index += 1 
+    print(dict)
+
+build_price_map(["pen", "paper", "eraser"], [5, 12, 3])
