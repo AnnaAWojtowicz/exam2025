@@ -47,7 +47,7 @@ def load_average_values(filename):
         for row in reader:
             # print(row)
             dictionary[row[0]] = round((sum([float(row[1]),float(row[2]),float(row[3])]) / 3), 1)
-           
+           # dictionary = round((float(row[1]) + float(row[2]) + float(row[3])) / 3, 1)     # <- this will work becuase there is no []
     #print(dictionary)
     return dictionary
 

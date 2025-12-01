@@ -132,3 +132,21 @@ def find_top_total_from_file(filename):
 find_top_total_from_file("data.txt")
 """
 
+"""
+# task9
+import csv
+
+def load_average_values(filename):
+    dict = {}
+    with open(filename, "r", newline="") as file:
+        reader = csv.reader(file)
+        next(reader)
+        for row in reader:
+            # dict[row[0]] = round((sum([float(row[1]),float(row[2]),float(row[3])]) / 3), 1)
+            dict[row[0]] = round((float(row[1]) + float(row[2]) + float(row[3])) / 3, 1)
+    #print(dict)
+    return dict
+
+load_average_values("scores.csv")
+
+"""
