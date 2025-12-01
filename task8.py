@@ -31,8 +31,8 @@ print(result)
 could produce:
 
 ('Alice', 17)
-Note(s):
 
+Note(s):
 It is very important to match the format of the returned tuple exactly as shown in the example(s).
 The example file contents, as shown above, will be created by the system during testing. You should only write the function you are asked to write.
 Assume all non-empty lines in the file are valid and contain a name and an integer value separated by a space.

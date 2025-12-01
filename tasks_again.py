@@ -93,7 +93,7 @@ def shortest_word(words):
 shortest_word(["elephant", "cat", "zebra"]) 
 """
 
-""""""
+"""
 
 # task7
 
@@ -106,3 +106,29 @@ def build_price_map(names, prices):
     print(dict)
 
 build_price_map(["pen", "paper", "eraser"], [5, 12, 3])
+"""
+
+"""
+# task 8
+
+def find_top_total_from_file(filename):
+    dict = {}
+    with open(filename, "r") as file:
+        for row in file:
+            row = row.strip()
+            if row == "":
+                continue
+            name, value = row.split()
+            if name in dict: 
+                dict[name] += int(value)
+            else:
+                dict[name] = int(value)
+        name = max(dict, key=dict.get)
+        highest_value = max(dict.values())
+        highest = (name, highest_value)
+    #print(highest)
+    return highest
+
+find_top_total_from_file("data.txt")
+"""
+
