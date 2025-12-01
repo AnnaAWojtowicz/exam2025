@@ -63,8 +63,9 @@ def load_ratings(filename):
     dictionary = {}
     with open(filename, "r", newline="") as file:
         reader = csv.reader(file)   # this reads each row as a list, but if I use reader = csv.DictReader(file) it will read each row as a dictionary
-        next(reader) # this omits header row
+        next(reader) # this omits header row 
         for row in reader:
+            #print(row)
             if row[0] in dictionary:
                 dictionary[row[0]] += [int(row[1])] # <- this adds values to the same list
             else: 
@@ -72,7 +73,7 @@ def load_ratings(filename):
     print(dictionary)
     return dictionary
 
-dictionary_items = load_ratings("data.csv")
+# dictionary_items = load_ratings("data.csv")
 
 def average_ratings(ratings_dict):
     average = {}

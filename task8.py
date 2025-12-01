@@ -48,6 +48,7 @@ def find_top_total_from_file(filename):
             line = line.strip()
             if not line:
                 continue
+            # print(line)
             name, some_value = line.split()
             if name in dictionary:
                 dictionary[name] += int(some_value)
